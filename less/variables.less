@@ -2,6 +2,13 @@
 // Variables
 // --------------------------------------------------
 
+@msgRed:                  #8b2d4b;
+@msgBlue:                 #1c6caa;
+@msgYellow:               #ff9933;
+@msgGreen:                #2a834b; // added from Schiller's chromatic circle
+
+@msgGrayForeground:       #333333;
+@msgGrayBackground:       #969696;
 
 //== Colors
 //
@@ -13,11 +20,11 @@
 @gray-light:             lighten(#000, 60%);   // #999
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
-@brand-primary:         #428bca;
-@brand-success:         #5cb85c;
-@brand-info:            #5bc0de;
-@brand-warning:         #f0ad4e;
-@brand-danger:          #d9534f;
+@brand-primary:         @msgRed;
+@brand-success:         @msgGreen;
+@brand-info:            @msgBlue;
+@brand-warning:         @msgYellow;
+@brand-danger:          @msgRed;
 
 
 //== Scaffolding
@@ -27,10 +34,10 @@
 //** Background color for `<body>`.
 @body-bg:               #fff;
 //** Global text color on `<body>`.
-@text-color:            @gray-dark;
+@text-color:            @msgGrayForeground;
 
 //** Global textual link color.
-@link-color:            @brand-primary;
+@link-color:            @msgRed;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 
@@ -39,7 +46,7 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  Verdana, Helvetica, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -184,7 +191,7 @@
 //** `<input>` border radius
 @input-border-radius:            @border-radius-base;
 //** Border color for inputs on focus
-@input-border-focus:             #66afe9;
+@input-border-focus:             lighten(@msgBlue, 25%); // #66afe9;
 
 //** Placeholder text color
 @input-color-placeholder:        @gray-light;
